@@ -1,7 +1,7 @@
 # @Author: Абделлах Улахияне
 # @Date:   2021-04-11 04:21:08
 # @Last Modified by:   Абделлах Улахияне
-# @Last Modified time: 2021-04-11 06:25:15
+# @Last Modified time: 2021-04-11 16:48:54
 # -*- coding: utf-8 -*-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -231,13 +231,13 @@ class Ui_MainWindow(object):
         db.delete("commands",{'id':self.commandid.text()})
 
     def click_btnaddguide(self):
-        db.add("commands",{'id':self.commandid.text(),"label":self.commandlabel.text(),"description":self.commanddescription.toPlainText()})
+        db.add("guide",{'id':self.guideid.text(),"label":self.guidelabel.text(),"description":self.guidedescription.toPlainText()})
 
     def click_btnupdateguide(self):
-        db.update("commands",{"label":self.guidelabel.text(),"description":self.guidedescription.toPlainText()},{'id':self.guideid.text()})
+        db.update("guide",{"label":self.guidelabel.text(),"description":self.guidedescription.toPlainText()},{'id':self.guideid.text()})
 
     def click_btndeleteguide(self):
-        db.delete("commands",{'id':self.guideid.text()})
+        db.delete("guide",{'id':self.guideid.text()})
 
 
 
